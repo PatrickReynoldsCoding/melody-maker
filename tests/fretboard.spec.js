@@ -1,5 +1,9 @@
-const { addNoteToFretboard } = require("../utils/fretboard");
-describe("the addFretToString function adds notes and returns a fretboard", () => {
+const {
+  addNoteToFretboard,
+  addAllNotesToFretboard,
+} = require("../utils/fretboard");
+
+describe("the addFretToString function adds a note and returns a fretboard", () => {
   beforeEach(() => {
     // Reset the fretboard array before each test
     fretboard = ["e |", "B |", "G |", "D |", "A |", "E |"];
@@ -92,6 +96,20 @@ describe("the addFretToString function adds notes and returns a fretboard", () =
       "D |---",
       "A |---",
       "E |---",
+    ]);
+  });
+});
+
+describe("the addAllNotesToFretboard function adds all notes and returns a fretboard", () => {
+  it("takes the notes ['0','2', '3']", () => {
+    const result = addAllNotesToFretboard(["0", "2", "3"]);
+    expect(result).toEqual([
+      "e |-------",
+      "B |-------",
+      "G |-------",
+      "D |-------",
+      "A |-------",
+      "E |-0-2-3-",
     ]);
   });
 });

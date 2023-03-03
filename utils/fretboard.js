@@ -10,12 +10,16 @@ const printFretboard = (note) => {
   }
 };
 
+const addAllNotesToFretboard = (notes) => {
+  let beat = 1;
+  let fretboardTemplate = ["e |", "B |", "G |", "D |", "A |", "E |"];
+  return fretboard;
+};
+
 // --NOTES FOR NEXT TIME:
 // Make the printFretboard function a loop that itirates over an array of notes.
 // On the 8th loop run a line that fills in any spaces and caps off each bar with a "|"
 // Remember to use the beat variable to plot where the note is going.
-// Also, edit code as a "--" is needed on each string that isn't being given a note.
-//"---" if the note is double digits.
 
 //  --Rough Plan:
 // for (let i = 0; i < notes.length; i++) {
@@ -57,5 +61,6 @@ const addNoteToFretboard = (note, fretboard, beat) => {
 
 module.exports = {
   addNoteToFretboard,
+  addAllNotesToFretboard,
   printFretboard,
 };
