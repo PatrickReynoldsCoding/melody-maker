@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/PatrickReynoldsCoding/melody-maker/issues"
   },
-  "homepage": "https://github.com/PatrickReynoldsCoding/melody-maker#readme"
+  "homepage": "https://github.com/PatrickReynoldsCoding/melody-maker#readme",
+  "dependencies": {
+    "jest": "^29.4.3"
+  }
 }

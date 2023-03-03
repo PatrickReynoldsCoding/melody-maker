@@ -39,7 +39,7 @@ const findString = (note) => {
     }
   }
 
-  return properties[0];
+  return properties;
 };
 
 console.log(findString(10));
