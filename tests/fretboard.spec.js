@@ -17,4 +17,24 @@ describe("the addFretToString function adds notes and returns a fretboard", () =
     const result = addNoteToFretboard(5, fretboard);
     expect(result).toEqual(["e ||", "B ||", "G ||", "D ||", "A |-0|", "E ||"]);
   });
+  it("takes the note 6", () => {
+    const result = addNoteToFretboard(6, fretboard);
+    expect(result).toEqual(["e ||", "B ||", "G ||", "D ||", "A |-1|", "E ||"]);
+  });
+  it("takes the note 10", () => {
+    const result = addNoteToFretboard(10, fretboard);
+    expect(result).toEqual(["e ||", "B ||", "G ||", "D |-0|", "A ||", "E ||"]);
+  });
+  it("takes the note 15", () => {
+    const result = addNoteToFretboard(15, fretboard);
+    expect(result).toEqual(["e ||", "B ||", "G |-0|", "D ||", "A ||", "E ||"]);
+  });
+  it("takes the note 19", () => {
+    const result = addNoteToFretboard(19, fretboard);
+    expect(result).toEqual(["e ||", "B |-0|", "G ||", "D ||", "A ||", "E ||"]);
+  });
+  it("takes the note 24", () => {
+    const result = addNoteToFretboard(24, fretboard);
+    expect(result).toEqual(["e |-0|", "B ||", "G ||", "D ||", "A ||", "E ||"]);
+  });
 });
