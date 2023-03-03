@@ -43,7 +43,8 @@ const addNoteToFretboard = (note, fretboard, beat) => {
     if (i !== stringIndex) {
       let otherString = fretboard[i];
       let otherSplitString = otherString.split("");
-      otherSplitString.splice(position, 0, "--");
+      let space = noteToAdd >= 10 ? "---" : "--";
+      otherSplitString.splice(position, 0, space);
       otherString = otherSplitString.join("");
       fretboard[i] = otherString;
     }
