@@ -3,7 +3,7 @@ const { stringsAndNotes } = require("./notes");
 
 const printFretboard = (note) => {
   let beat = 1;
-  let fretboardTemplate = ["e ||", "B ||", "G ||", "D ||", "A ||", "E ||"];
+  let fretboardTemplate = ["e |", "B |", "G |", "D |", "A |", "E |"];
   const fretboard = addNoteToFretboard(note, fretboardTemplate, beat);
   for (let i = 0; i < fretboard.length; i++) {
     console.log(fretboard[i] + "\n");
@@ -38,8 +38,19 @@ const addNoteToFretboard = (note, fretboard, beat) => {
   let position = beat + 2;
   splitString.splice(position, 0, `-${noteToAdd.toString()}`);
   currentString = splitString.join("");
+  // Add "--" to the other 5 elements(strings) except for the modified string
+  for (let i = 0; i < fretboard.length; i++) {
+    if (i !== stringIndex) {
+      let otherString = fretboard[i];
+      let otherSplitString = otherString.split("");
+      otherSplitString.splice(position, 0, "--");
+      otherString = otherSplitString.join("");
+      fretboard[i] = otherString;
+    }
+  }
   // Add new guitar string to our fretboard
   fretboard[stringIndex] = currentString;
+
   return fretboard;
 };
 
