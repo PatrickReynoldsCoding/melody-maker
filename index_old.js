@@ -80,4 +80,4 @@ const addFretToString = (note) => {
   printFretboard(fretboard);
 };
 
-addFretToString(0);
+addFretToString(6);

@@ -1,3 +1,3 @@
 const { printFretboard } = require("./utils/fretboard");
 
-printFretboard(0);
+printFretboard(5);
