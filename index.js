@@ -1,3 +1,3 @@
-const { addFretToString } = require("./utils/fretboard");
+const { printFretboard } = require("./utils/fretboard");
 
-addFretToString(0);
+printFretboard(0);

@@ -2,11 +2,14 @@ const { findString } = require("./strings");
 
 const fretboard = ["e ||", "B ||", "G ||", "D ||", "A ||", "E ||"];
 
-const printFretboard = () => {
+const printFretboard = (note) => {
+  const fretboard = addFretToString(note);
   for (let i = 0; i < fretboard.length; i++) {
     console.log(fretboard[i] + "\n");
   }
 };
+
+let beat = 1;
 
 const addFretToString = (note) => {
   const stringIndex = findString(note);
@@ -15,9 +18,9 @@ const addFretToString = (note) => {
   stringArray.splice(beat + 2, 0, `-${note.toString()}`);
   currentString = stringArray.join("");
   fretboard[stringIndex] = currentString;
-  printFretboard();
+  return fretboard;
 };
 
 module.exports = {
-  addFretToString,
+  printFretboard,
 };
