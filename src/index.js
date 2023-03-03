@@ -58,17 +58,17 @@ const printFretboard = (fretboard) => {
 
 // Function to add note to fretboard
 const addFretToString = (note) => {
-  // Subtract 1 from stringNum to get the correct index in the array
+  // Get string index
   const stringIndex = findString(note);
 
-  // Get the current string from the fretboard array
+  // Get the chosen string from the fretboard array
   let currentString = fretboard[stringIndex];
 
   // Split the string into an array of characters
   let stringArray = currentString.split("");
 
   // Replace the space between the pipes with the fret number
-  stringArray[beat + 3] = note.toString();
+  stringArray.splice(beat + 2, 0, `-${note.toString()}`);
 
   // Join the characters back into a string
   currentString = stringArray.join("");
