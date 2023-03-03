@@ -101,15 +101,15 @@ describe("the addFretToString function adds a note and returns a fretboard", () 
 });
 
 describe("the addAllNotesToFretboard function adds all notes and returns a fretboard", () => {
-  it("takes the notes ['0','2', '3']", () => {
-    const result = addAllNotesToFretboard(["0", "2", "3"]);
+  it("takes the notes [0,2,3]", () => {
+    const result = addAllNotesToFretboard([0, 2, 3]);
     expect(result).toEqual([
-      "e |-------",
-      "B |-------",
-      "G |-------",
-      "D |-------",
-      "A |-------",
-      "E |-0-2-3-",
+      "e |-------|",
+      "B |-------|",
+      "G |-------|",
+      "D |-------|",
+      "A |-------|",
+      "E |-0-2-3-|",
     ]);
   });
 });

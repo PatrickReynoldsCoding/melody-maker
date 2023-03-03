@@ -10,27 +10,6 @@ const printFretboard = (note) => {
   }
 };
 
-const addAllNotesToFretboard = (notes) => {
-  let beat = 1;
-  let fretboardTemplate = ["e |", "B |", "G |", "D |", "A |", "E |"];
-  return fretboard;
-};
-
-// --NOTES FOR NEXT TIME:
-// Make the printFretboard function a loop that itirates over an array of notes.
-// On the 8th loop run a line that fills in any spaces and caps off each bar with a "|"
-// Remember to use the beat variable to plot where the note is going.
-
-//  --Rough Plan:
-// for (let i = 0; i < notes.length; i++) {
-//   // loop through array
-
-//   if ((i + 1) % 8 === 0) {
-//     // check if index is a multiple of 8
-//     // run extra line of code here
-//   }
-// }
-
 const addNoteToFretboard = (note, fretboard, beat) => {
   const stringIndex = findString(note);
   // Get the correct guitar string based off the note and return a split copy
@@ -58,6 +37,27 @@ const addNoteToFretboard = (note, fretboard, beat) => {
 
   return fretboard;
 };
+
+const addAllNotesToFretboard = (notes) => {
+  let fretboardTemplate = ["e |", "B |", "G |", "D |", "A |", "E |"];
+  for (let i = 0, beat = 1; i < notes.length; i++) {
+    fretboard = addNoteToFretboard(notes[i], fretboardTemplate, beat);
+
+    // if ((i + 1) % 8 === 0) {
+    // }
+    beat += 2;
+  }
+  // cap off the last section
+  fretboard.forEach((string, index) => {
+    fretboard[index] = string + "-|";
+  });
+  return fretboard;
+};
+addAllNotesToFretboard([0, 2, 3]);
+
+// --NOTES FOR NEXT TIME:
+// cap off bar
+// code beat so its 3 if noteToAdd >=10
 
 module.exports = {
   addNoteToFretboard,
