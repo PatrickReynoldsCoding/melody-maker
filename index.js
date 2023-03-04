@@ -1,32 +1,4 @@
 const { printFretboard } = require("./utils/fretboard");
+const { melodies } = require("./data/melodies");
 
-printFretboard([
-  0,
-  0,
-  2,
-  4,
-  0,
-  2,
-  4,
-  7,
-  7,
-  7,
-  6,
-  4,
-  2,
-  0,
-  "-",
-  0,
-  2,
-  4,
-  0,
-  2,
-  4,
-  7,
-  7,
-  7,
-  9,
-  7,
-  4,
-  2,
-]);
+printFretboard(melodies[0]);
