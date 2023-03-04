@@ -1,10 +1,8 @@
 const { findString } = require("./strings");
 const { stringsAndNotes } = require("./notes");
 
-const printFretboard = (note) => {
-  let beat = 1;
-  let fretboardTemplate = ["e |", "B |", "G |", "D |", "A |", "E |"];
-  const fretboard = addNoteToFretboard(note, fretboardTemplate, beat);
+const printFretboard = (notes) => {
+  let fretboard = addAllNotesToFretboard(notes);
   for (let i = 0; i < fretboard.length; i++) {
     console.log(fretboard[i] + "\n");
   }
@@ -53,7 +51,6 @@ const addAllNotesToFretboard = (notes) => {
   });
   return fretboard;
 };
-addAllNotesToFretboard([0, 2, 3]);
 
 // --NOTES FOR NEXT TIME:
 // cap off bar
