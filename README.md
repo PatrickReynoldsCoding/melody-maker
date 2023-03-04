@@ -1,4 +1,4 @@
-# melody-maker
+# Melody Magic
 
 Beta running [here](https://replit.com/@PatrickReynold2/melody-maker#index.js)
 
