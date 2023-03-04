@@ -1,6 +1,6 @@
 # melody-maker
 
-Beta running at :
+Beta running [here](https://replit.com/@PatrickReynold2/melody-maker#index.js)
 
 ## About 
 Bit of fun with music theory logic + coding
