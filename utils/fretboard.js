@@ -2,9 +2,20 @@ const { findString } = require("./strings");
 const { stringsAndNotes } = require("./notes");
 
 const printFretboard = (notes) => {
-  let fretboard = addAllNotesToFretboard(notes);
-  for (let i = 0; i < fretboard.length; i++) {
-    console.log(fretboard[i] + "\n");
+  if (notes.length > 32) {
+    const bars = [];
+    let i, j;
+    for (i = 0, j = notes.length; i < j; i += 32) {
+      bars.push(notes.slice(i, i + 32));
+    }
+    for (let bar of bars) {
+      printFretboard(bar);
+    }
+  } else {
+    let fretboard = addAllNotesToFretboard(notes);
+    for (let i = 0; i < fretboard.length; i++) {
+      console.log(fretboard[i] + "\n");
+    }
   }
 };
 
