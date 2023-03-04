@@ -1,3 +1,32 @@
 const { printFretboard } = require("./utils/fretboard");
 
-printFretboard([0, 2, 3, 5, 7, 8, 10, 12, 24, 30, 38]);
+printFretboard([
+  0,
+  0,
+  2,
+  4,
+  0,
+  2,
+  4,
+  7,
+  7,
+  7,
+  6,
+  4,
+  2,
+  0,
+  "-",
+  0,
+  2,
+  4,
+  0,
+  2,
+  4,
+  7,
+  7,
+  7,
+  9,
+  7,
+  4,
+  2,
+]);

@@ -123,4 +123,15 @@ describe("the addAllNotesToFretboard function adds all notes and returns a fretb
       "E |-0-2-3-----------|",
     ]);
   });
+  it("takes the notes [0,2,3,5,7,8,10,12, '-']", () => {
+    const result = addAllNotesToFretboard([0, 2, 3, 5, 7, 8, 10, 12, "-"]);
+    expect(result).toEqual([
+      "e |-------------------|",
+      "B |-------------------|",
+      "G |-------------------|",
+      "D |-------------0-2---|",
+      "A |-------0-2-3-------|",
+      "E |-0-2-3-------------|",
+    ]);
+  });
 });

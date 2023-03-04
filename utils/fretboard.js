@@ -39,13 +39,20 @@ const addNoteToFretboard = (note, fretboard, beat) => {
 const addAllNotesToFretboard = (notes) => {
   let fretboardTemplate = ["e |", "B |", "G |", "D |", "A |", "E |"];
   for (let i = 0, beat = 1; i < notes.length; i++) {
-    fretboard = addNoteToFretboard(notes[i], fretboardTemplate, beat);
-
+    let note = notes[i];
+    if (note === "-") {
+      fretboard.forEach((string, index) => {
+        fretboard[index] = string + "--";
+      });
+    } else {
+      fretboard = addNoteToFretboard(note, fretboardTemplate, beat);
+    }
     // if ((i + 1) % 8 === 0) {
     // }
     beat += 2;
   }
   // cap off the last section
+
   fretboard.forEach((string, index) => {
     fretboard[index] = string + "-|";
   });
