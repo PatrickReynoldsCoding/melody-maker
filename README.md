@@ -1,4 +1,4 @@
-# melody-maker
+# Melody Magic
 
 Beta running [here](https://replit.com/@PatrickReynold2/melody-maker#index.js)
 
@@ -15,9 +15,9 @@ Bit of fun with music theory logic + coding
 
 Before designing the code that will generate our melodies I asked chatGPT to generate some of its own using this initial prompt:
 
-\*Write an array that will be used to generate random melodies based on the following constraints:
+*"Write an array that will be used to generate random melodies based on the following constraints:*
 
-Key: E minor
+*Key: E minor
 Scale: Natural minor
 Tempo: 120 bpm
 Time signature: 4/4
@@ -28,4 +28,4 @@ Use a combination of eighth notes, quarter notes, and half notes to create the m
 The melody should be at least 8 bars long
 Use repetition and variation to create a memorable and interesting melody
 Harmonize the melody with appropriate chords
-The program should output the melody as an array of integers and dashes representing the notes and rests, respectively. Additionally, provide a brief explanation of the music techniques used to create the melody, including the rhythm, phrasing, and harmonization.\*
+The program should output the melody as an array of integers and dashes representing the notes and rests, respectively. Additionally, provide a brief explanation of the music techniques used to create the melody, including the rhythm, phrasing, and harmonization."*
