@@ -1,24 +1,6 @@
 const { findString } = require("./strings");
 const { stringsAndNotes } = require("./notes");
 
-const printFretboard = (notes) => {
-  if (notes.length > 32) {
-    const bars = [];
-    let i, j;
-    for (i = 0, j = notes.length; i < j; i += 32) {
-      bars.push(notes.slice(i, i + 32));
-    }
-    for (let bar of bars) {
-      printFretboard(bar);
-    }
-  } else {
-    let fretboard = addAllNotesToFretboard(notes);
-    for (let i = 0; i < fretboard.length; i++) {
-      console.log(fretboard[i] + "\n");
-    }
-  }
-};
-
 const addNoteToFretboard = (note, fretboard, beat) => {
   const stringIndex = findString(note);
   // Get the correct guitar string based off the note and return a split copy
@@ -49,6 +31,7 @@ const addNoteToFretboard = (note, fretboard, beat) => {
 
 const addAllNotesToFretboard = (notes) => {
   let fretboardTemplate = ["e |", "B |", "G |", "D |", "A |", "E |"];
+  let fretboard = [];
   for (let i = 0, beat = 1; i < notes.length; i++) {
     let note = notes[i];
     if (note === "-") {
@@ -68,6 +51,24 @@ const addAllNotesToFretboard = (notes) => {
     fretboard[index] = string + "-|";
   });
   return fretboard;
+};
+
+const printFretboard = (notes) => {
+  if (notes.length > 32) {
+    const bars = [];
+    let i, j;
+    for (i = 0, j = notes.length; i < j; i += 32) {
+      bars.push(notes.slice(i, i + 32));
+    }
+    for (let bar of bars) {
+      printFretboard(bar);
+    }
+  } else {
+    let fretboard = addAllNotesToFretboard(notes);
+    for (let i = 0; i < fretboard.length; i++) {
+      console.log(fretboard[i] + "\n");
+    }
+  }
 };
 
 // --NOTES FOR NEXT TIME:
