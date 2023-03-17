@@ -1,4 +1,10 @@
-const { printFretboard } = require("./utils/fretboard");
+const { printFretboard } = require("./guitar/fretboard");
 const { melodies } = require("./data/melodies");
+const { melodyGenerator } = require("./guitar/melodyGenerator");
+const { major } = require("./data/scales");
 
-printFretboard(melodies[melodies.length - 1]);
+const options = {
+  length: 32,
+};
+
+printFretboard(melodyGenerator(major, options));
