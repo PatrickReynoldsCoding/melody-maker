@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --testMatch='test/**/*.[jt]s?(x)' --watchAll",
     "start": "node index.js"
   },
   "repository": {
@@ -18,7 +18,7 @@
     "url": "https://github.com/PatrickReynoldsCoding/melody-maker/issues"
   },
   "homepage": "https://github.com/PatrickReynoldsCoding/melody-maker#readme",
-  "dependencies": {
-    "jest": "^29.4.3"
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

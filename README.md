@@ -11,6 +11,17 @@ Bit of fun with music theory logic + coding
 [FigmaJam](https://www.figma.com/file/JKGEWwbEvJGJCWcgVe2v46/Melody-maker?node-id=6%3A186&t=UkRzxgxlMuifcw0b-0)
 [Kanban](https://github.com/users/PatrickReynoldsCoding/projects/10/views/1)
 
+
+## Todo 
+
+IN PROGRESS
+1. function to pick a random note in scale 
+2. Pick direction
+3. produce n notes
+
+TODO
+
+
 ## ChatGPT
 
 Before designing the code that will generate our melodies I asked chatGPT to generate some of its own using this initial prompt:
